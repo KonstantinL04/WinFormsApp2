@@ -5,6 +5,8 @@ namespace WinFormsApp2
         public Form1()
         {
             InitializeComponent();
+            txtAreaOfCircle.Text = Properties.Settings.Default.circleRadius.ToString();
+            txtAreaOfSquare.Text = Properties.Settings.Default.squareRadius.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -19,6 +21,10 @@ namespace WinFormsApp2
             {
                 return;
             }
+            Properties.Settings.Default.circleRadius = circleRadius;
+            Properties.Settings.Default.squareRadius = squareRadius;
+            Properties.Settings.Default.Save();
+
             MessageBox.Show(Logic.Compare(circleRadius, circleRadius));
         }
     }
