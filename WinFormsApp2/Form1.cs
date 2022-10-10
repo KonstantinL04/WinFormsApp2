@@ -39,15 +39,15 @@ namespace WinFormsApp2
                 double areaOfSquare = Math.Pow(squareSide, 2);
                 if (areaOfCircle > areaOfSquare)
                 {
-                    result = "Площадь круга больше";
+                    result = "Ответ: площадь круга больше";
                 }
                 else if (areaOfCircle < areaOfSquare)
                 {
-                    result = "Площадь квадрата больше";
+                    result = "Ответ: площадь квадрата больше";
                 }
                 else
                 {
-                    result = "Площади равны";
+                    result = "Ответ: площади равны";
                 }
             }
             else result = "Отрицательный радиус.\n\nПовторите ввод.";
